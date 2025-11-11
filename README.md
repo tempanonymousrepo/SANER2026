@@ -53,8 +53,8 @@ After completing the above steps, you will obtain:
 - **Hero CSV files** — representing different hero developer categories.  
 - **Pickle files** — intermediate data representations for further processing.  
 - **Fixed and Reopened Severity Pickles** — categorized issue severity data.  
+- **Jaccard Heatmaps** — similarity visualizations among hero categories.
 - **Scott-Knott Rankings** — comparative rankings of hero groups by severity.  
-- **Jaccard Heatmaps** — similarity visualizations among hero categories.  
 - **Kendall’s Tau Correlations** — statistical correlations across rankings.
 
 These outputs together replicate the full experimental workflow and results presented in the paper.
