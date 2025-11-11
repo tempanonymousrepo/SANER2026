@@ -1,0 +1,43 @@
+import time
+import pickle as pkl
+# import bson
+
+
+class SuperHeroes:
+    def __init__(self):
+        self.hero_project_author_loc = dict()
+        self.hero_project_author_comments = dict()
+        self.superhero_data = dict()
+
+    def constructing_dictionaries(self):
+        file_path = 'technicalHeroesLOC.pkl'
+        with open(file_path, 'rb') as file:
+            self.hero_project_author_loc = pkl.load(file)
+        print('dictionary 1 created')
+        file_path = 'technicalHeroesComments.pkl'
+        with open(file_path, 'rb') as file:
+            self.hero_project_author_comments = pkl.load(file)
+        print('dictionary 3 created')
+
+    def constructing_final(self):
+        for project in self.hero_project_author_loc:
+            if project in self.hero_project_author_comments:
+                if project not in self.superhero_data:
+                    self.superhero_data[project] = list()
+                for author in self.hero_project_author_loc[project]:
+                    if author in self.hero_project_author_comments[project]:
+                        self.superhero_data[project].append(author)
+        for project in self.superhero_data:
+            print(project)
+            print(len(self.superhero_data[project]))
+            # print(len(self.hero_project_author_comments[project]))
+
+
+if __name__ == "__main__":
+    start_time = time.time()
+    obj1 = SuperHeroes()
+    obj1.constructing_dictionaries()
+    obj1.constructing_final()
+    end_time = time.time()
+    total_time = end_time - start_time
+    print(f" Total time taken to execute the code is  {total_time} seconds ")
