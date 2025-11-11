@@ -27,19 +27,19 @@ To reproduce the results of the study, follow these steps in sequence:
    These scripts will generate CSV files representing different hero developer categories.
 
 2. **Generate Pickle Files**  
-   Run the script `1_pickles.py` to convert the generated CSVs into pickle files.
+   Run the script `avg_time_pickles.py` to get the average time each severity-hero pair.
 
 3. **Create Fixed and Reopened Issue Severity Pickles**  
-   Execute the scripts `2a_fixed_issues.py` and `2b_reopened_issues.py` sequentially.  
-   These scripts generate severity-level pickle files for both fixed and reopened issues using the pickle data from Step 2.
-
-4. **Compute Scott-Knott Rankings (RQ1)**  
-   Run the script `rq1_scott-knot.py`.  
-   This will produce the Scott-Knott rankings for each severity level across both fixed and reopened issue categories.
-
-5. **Compute Jaccard Coefficients (RQ2)**  
+   Execute the scripts `fixed_issues.py` and `reopened_issues.py` sequentially.  
+   These scripts generate severity-level pickle files for both fixed and reopened issues.
+ 
+4. **Compute Jaccard Coefficients (RQ2)**  
    Run the script `rq2_jaccard.py`.  
    This script generates Jaccard coefficient heatmaps showing the similarity between different hero types.
+
+5. **Compute Scott-Knott Rankings (RQ3)**  
+   Run the script `rq3_scott-knot.py` and `rq3_scott-knot_esd.py`.  
+   This will produce the Scott-Knott rankings for each severity level across both fixed and reopened issue categories.
 
 6. **Compute Kendall’s Tau Correlations (RQ3)**  
    Run the script `rq3_kendall-tau.py`.  
