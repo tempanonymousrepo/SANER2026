@@ -58,7 +58,6 @@ After completing the above steps, you will obtain:
 - **Kendall’s Tau Correlations** — statistical correlations across rankings.
 
 These outputs together replicate the full experimental workflow and results presented in the paper.
----
 
 ## 📄 Paper
 
